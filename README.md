@@ -1,37 +1,42 @@
 # taro-issue-12505-sample
+
 taro-issue-12505-sample
 
-# 问题
+# ewei-frontend-taro
 
-执行 `npm run build:rn`
+基于 Taro 的 跨平台的 小屏方案
 
-提示
+输出为 H5 + 微信小程序 + APP(RN)
 
 ```
-> taro-issue-12505-sample@1.0.0 build:rn
-> taro build --type rn
-
-👽 Taro v3.5.5
-
-                    Welcome to Metro!
-              Fast - Scalable - Integrated
-
-
-/Users/lmw/git/taro-issue-12505-sample/node_modules/metro-hermes-compiler/src/emhermesc.js:77
-          throw ex;
-          ^
-
-RuntimeError: abort(Error: Unable to resolve module @tarojs/components-rn/dist/components/View from /Users/lmw/git/taro-issue-12505-sample/src/pages/index/index.tsx: @tarojs/components-rn/dist/components/View could not be found within the project or in these directories:
-  node_modules
-> 1 | import { Component, PropsWithChildren } from 'react'
-  2 | import { View, Text } from '@tarojs/components'
-  3 | import './index.scss'
-  4 |). Build with -s ASSERTIONS=1 for more info.
-    at process.abort (/Users/lmw/git/taro-issue-12505-sample/node_modules/metro-hermes-compiler/src/emhermesc.js:402:15)
-    at process.emit (node:events:525:35)
-    at emit (node:internal/process/promises:149:20)
-    at processPromiseRejections (node:internal/process/promises:283:27)
-    at processTicksAndRejections (node:internal/process/task_queues:96:32)
-
-Node.js v18.7.0
+node -v v18.7.0
+npm -v 8.15.0
+yarn -v 1.22.19
+taro -v v3.5.5
 ```
+
+安装
+
+```
+yarn
+```
+
+本地启动
+
+```
+yarn dev:h5
+yarn dev:weapp
+yarn dev:rn
+```
+
+构建
+
+```
+yarn build:h5
+yarn build:weapp
+yarn build:rn
+```
+
+[https://github.com/NervJS/taro/issues/12505](https://github.com/NervJS/taro/issues/12505) 项目搭建问题跟踪
+
+[https://github.com/wuba/taro-playground/releases/tag/v1.6.4](https://github.com/wuba/taro-playground/releases/tag/v1.6.4) 需搭配1.6.4版的 taro-playground；非最新版
